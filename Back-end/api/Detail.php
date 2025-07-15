@@ -1,5 +1,5 @@
 <?php
-include '../../config.php';
+include '../config.php';
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
@@ -23,7 +23,7 @@ if ($method === 'PUT') {
 
     $title = mysqli_real_escape_string($conn, $data['title']);
     $thumb = mysqli_real_escape_string($conn, $data['thumbnail']);
-    $content = mysqli_real_escape_string($conn, json_encode($data['content']));
+    $content = mysqli_real_escape_string($conn, $data['content']);
 
     $q = mysqli_query($conn, "UPDATE blog SET title='$title', thumbnail='$thumb', content='$content' WHERE id='$id'");
 

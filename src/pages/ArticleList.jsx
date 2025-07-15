@@ -7,7 +7,7 @@ const ArticleList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost/ptm13-risam/mern/mern-blog/client/Back-end/api/index.php")
+      .get(" http://127.0.0.1/project_UAS/ptm13/Back-end/api/")
       .then((res) => {
 
         console.log(res.data);

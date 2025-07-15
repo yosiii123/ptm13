@@ -7,8 +7,9 @@ const Article = () => {
   const [article, setArticle] = useState(null); // State untuk artikel
 
   useEffect(() => {
+    //link get menyesuaikan dengan folder project masing-masing
     axios
-      .get(`http://localhost/ptm13-risam/mern/mern-blog/client/Back-end/api/index.php?id=${id}`)
+      .get(`http://127.0.0.1/project_UAS/ptm13/Back-end/api/?id=${id}`)
       .then((res) => setArticle(res.data))
       .catch((err) => console.error("Gagal mengambil artikel:", err));
   }, [id]);
